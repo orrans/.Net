@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isNum(input) {
+        if (!isNaN(input)) {
+          return `${input} is a number`;
+        }
+        return `${input} isnt a number, its ${typeof input}`;
+      }
+
+      function divideAndMudolos(x, y) {
+        if (y == 0) {
+          console.log("you cant divide in 0");
+        } else {
+          let div = x / y;
+          let mod = x % y;
+          console.log(`Division result: ${div} \nRemains: ${mod}`);
+        }
+      }
+      divideAndMudolos(1,5);
+      divideAndMudolos(0,5);
+      divideAndMudolos(8,0);
+      divideAndMudolos(2,9);
+    //   alert(isNum(12));
+    //   alert(isNum("dsf"));
+    </script>
+  </body>
+</html>

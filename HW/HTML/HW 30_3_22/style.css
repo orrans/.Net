@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section {
+  border: 5px #529 solid;
+  background-color: rgb(215, 250, 250);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 80px;
+}
+nav {
+  background-color: cadetblue;
+  color: aliceblue;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 200px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li li a {
+  display: block;
+  border: solid black thin;
+  padding: 10px;
+  background-color: antiquewhite;
+  color: black;
+  width: 104px;
+}
+
+nav li li:hover a {
+  background-color: aquamarine;
+}
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+}
+
+nav li:hover ul {
+  display: initial;
+}
+nav > ul > li {
+  margin-right: -5px;
+}
+nav > ul > li > a {
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 2px solid black;
+  border-left: none;
+  display: inline-block;
+}
+/* גורם למסגרת של האלמנט הראשון להיות שלימה גם בצד שמאל */
+nav > ul > li:first-child > a {
+  border: 2px solid black;
+}
+li {
+  display: inline-block;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+aside img {
+  width: 200px;
+}
+
+main {
+  width: calc(100% - 200px);
+}

@@ -1,0 +1,21 @@
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+}
+
+td {
+
+  width: 100px;
+  height: 100px;
+}
+
+.vertical {
+  border-left: solid black medium;
+  border-right: solid black medium;
+}
+
+.horizontal{
+    border-top: solid black medium;
+    border-bottom: solid black medium;
+}

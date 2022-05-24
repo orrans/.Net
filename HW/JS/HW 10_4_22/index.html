@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class = "form" onsubmit="sendForm(event)">
+        <label for="sname">Student name:</label><br>
+        <input type="text" id="sname" name="sname" required><br>
+        <label for="grades">Student grades:</label><br>
+        <textarea id="grades" name="grades" placeholder="Please enter grades with , or in new line" required></textarea><br>
+        <div class="submitContainer"><div><label for="gpass">Does the student have green pass?:</label>
+        <input type="checkbox" id="gpass" name="gpass"></div>
+        <button type="submit">Submit</button></div>
+    </form>
+    <hr>
+    <div id="result"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

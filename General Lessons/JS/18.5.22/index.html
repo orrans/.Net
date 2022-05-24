@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculate run speed</h1>
+    <h2>How many meters</h2>
+    <input type="number" id="meters" />
+    <h2>How many seconds</h2>
+    <input type="number" id="seconds" />
+
+    <div>
+      Run speed:
+      <div><span class="ans">0</span> Meters in seconds</div>
+      <div><span class="ans">0</span> KPH</div>
+      <form>
+        <h2>Enter the word you want to add</h2>
+        <input type="text" id="wordli" required />
+        <input type="submit" value="Add" />
+        <ul></ul>
+      </form>
+    </div>
+
+    <script>
+      const meters = document.querySelector("#meters");
+      const seconds = document.querySelector("#seconds");
+      const answers = document.querySelectorAll(".ans");
+
+      meters.addEventListener("keyup", calc);
+      seconds.addEventListener("keyup", calc);
+
+      function calc() {
+        answers[0].innerText = (meters.value / seconds.value).toFixed(2);
+        answers[1].innerText = ((meters.value / seconds.value) * 3.6).toFixed(2);
+      }
+      const form = document.forms[0];
+      const word = document.querySelector("#wordli");
+      const ul = document.querySelector("ul");
+      //   const button = document.querySelector("submit");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const item = document.createElement("li");
+        const wordToAdd = document.createTextNode(word.value);
+        item.appendChild(wordToAdd);
+        ul.appendChild(item);
+        word.value = "";
+        word.focus();
+      });
+    </script>
+  </body>
+</html>

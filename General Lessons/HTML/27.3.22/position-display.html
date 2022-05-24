@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(100, 148, 237, 0.5);
+        border: dashed thin;
+      }
+      .po {
+        background-color: rgba(139, 0, 0, 0.5);
+        position: relative;
+        top: 30px;
+        left: 30px;
+        box-shadow: -5px 5px 10px 0px;
+      }
+      .abs {
+        background-color: rgba(4, 121, 4, 0.5);
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        box-shadow: -5px 5px 10px 0px;
+      }
+      .article {
+        height: 150px;
+        width: 150px;
+        background-color: rgb(255, 226, 188);
+        margin: 5px;
+        display: inline-block;
+      }
+      .card{
+          border: thin black solid;
+          box-shadow: 0px 2px 5px 0px;
+          width: 30%;
+          padding: 5px;
+      }
+      h3{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          margin-top: 50px;
+      }
+      img{
+          width: 100%;
+          opacity: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box po">2</div>
+    <div class="box">3</div>
+
+    <div style="position: relative">
+      <div class="box">11</div>
+      <div class="box abs">12</div>
+      <div class="box">13</div>
+    </div>
+
+    <article class="article"></article>
+    <article class="article"></article>
+    <article class="article"></article>
+    <article class="article"></article>
+    <hr />
+    <article class="card">
+      <header style="position: relative;">
+        <img
+          src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          alt="pic" width="600px"
+        />
+        <h3>Article title</h3>
+      </header>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+        voluptatem possimus quae a facere veritatis.
+      </p>
+    </article>
+  </body>
+</html>

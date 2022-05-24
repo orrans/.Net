@@ -1,0 +1,28 @@
+a[href$=".pdf"]::before {
+  content: "📄";
+}
+a[href$=".jpg"]::before {
+  content: "🖼️";
+}
+a[href$=".html"]::before {
+  content: "🌍";
+}
+
+table {
+  border: solid thin;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+}
+
+tr:nth-child(odd) td:nth-child(odd) {
+  background-color: black;
+}
+tr:nth-child(even) td:nth-child(even) {
+  background-color: black;
+}

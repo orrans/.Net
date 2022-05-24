@@ -1,0 +1,29 @@
+table,
+td,
+th {
+  border: 1px solid black;
+  height: 24px;
+}
+th {
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 8px;
+  background-color: antiquewhite;
+}
+td,
+th {
+  padding-left: 4px;
+}
+tr:hover {
+  background-color: bisque;
+  box-shadow: 1px 0px 4px 1px black;
+}
+
+ul {
+  width: 550px;
+  margin: 0 auto;
+  }

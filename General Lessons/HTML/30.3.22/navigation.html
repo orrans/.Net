@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    section{
+      border: 5px #529 solid;
+      background-color: rgb(215, 250, 250);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      padding: 80px;
+    }
+    nav{
+      background-color: cadetblue;
+      color: aliceblue;
+      position: fixed;
+      width: 100%;
+      text-align: center;
+    }
+    a{
+      color: aliceblue;
+      text-decoration: none;
+      padding: 10px 30px;
+      border: 2px solid black;
+      border-left: none;
+      display: inline-block;
+    }
+    /* גורם למסגרת של האלמנט הראשון להיות שלימה גם בצד שמאל */
+    li:first-child > a{
+      border: 2px solid black;
+    }
+    li{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <!-- nav>ul>li*5>a -->
+  <nav>
+    <ul>
+      <li><a href="#s1">Link 1</a>
+      </li><li><a href="#s2">Link 2</a>
+      </li><li><a href="#s3">Link 3</a>
+      </li><li><a href="#s4">Link 4</a>
+      </li><li><a href="#s5">Link 5</a></li>
+    </ul>
+  </nav>
+  <section id="s1"> <h2>Section 1</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.</p></section>
+  <section id="s2"> <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.</p></section>
+  <section id="s3"> <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.</p></section>
+  <section id="s4"> <h2>Section 4</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.</p></section>
+  <section id="s5"> <h2>Section 5</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.</p></section>
+</body>
+</html>

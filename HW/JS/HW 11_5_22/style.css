@@ -1,0 +1,43 @@
+table,
+td,
+th {
+  border: 1px solid black;
+  height: 24px;
+}
+th {
+  text-align: left;
+  width: 110px;
+}
+table.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 8px;
+  background-color: antiquewhite;
+  border-color: black;
+}
+
+td,
+th {
+  padding-left: 4px;
+}
+tr:hover {
+  background-color: bisque;
+  box-shadow: 1px 0px 4px 1px black;
+}
+
+form {
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+form button {
+  margin-top: 8px;
+  width: 100%;
+}
+
+#CarList {
+  padding:0 20px 20px;
+}
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Convert celsius to fahrenheit</h1>
+    <form>
+      <h2>Celsius</h2>
+      <input type="number" id="cel" />
+      <div style="padding-top: 32px"><span id="far">0</span> fahrenheit</div>
+    </form>
+
+    <script>
+      let cel = document.querySelector("#cel");
+      let far = document.querySelector("#far");
+      cel.addEventListener("keyup", onChange);
+      cel.addEventListener("change", onChange);
+      function onChange() {
+        far.innerText = (cel.value * 1.8 + 32).toFixed(2);
+      }
+    </script>
+  </body>
+</html>

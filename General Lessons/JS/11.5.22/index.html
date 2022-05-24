@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const words = ["word 1", "word 2", "word 3", "word 4"];
+      //   words.forEach((element) => {
+      //     alert(element);
+      //   });
+
+      const TDA = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      let table = "<table>";
+      table +=
+        "<tr><td>" +
+        TDA[0] +
+        "</td></tr>" +
+        "<tr><td>" +
+        TDA[1] +
+        "</td></tr>" +
+        "<tr><td>" +
+        TDA[2] +
+        "</td></tr>";
+      table += "</tr>";
+      table += "</table>";
+      document.write(table);
+
+      let arr = [1, 2, 3, 4, 5];
+      function sum(array) {
+        let sum = 0;
+        for (let index = 0; index < array.length; index++) {
+          sum += array[index];
+        }
+        console.log(sum);
+      }
+      sum(arr);
+      sum([1, 2, 3, 4]);
+
+      function findInArray(arr, numToFind) {
+          isExists = false;
+          for (var i = 0; i < arr.length; i++) {
+              for (var j = 0; j < arr.length; j++) {
+                  if (arr[i][j]=== numToFind) {
+                    isExists = true;
+                  }
+              }
+          }
+
+          if (isExists) {
+            console.log(`the number ${numToFind} is in the array - Array numbers: ${arr}`)
+          }
+          else
+          console.log(`the number ${numToFind} isnt exists in the array - Array numbers: ${arr}`)
+      }
+
+      findInArray(arr,3);
+      findInArray(arr,9);
+
+      findInArray(TDA,2);
+      findInArray(TDA , 55)
+    </script>
+  </body>
+</html>

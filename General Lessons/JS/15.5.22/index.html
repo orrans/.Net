@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .ball{
+            position: relative;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            color: white;
+            transition: all 1s;
+            
+        }
+
+    </style>
+  </head>
+  <body>
+    <h2 id="h2Dom">Original text.</h2>
+    <h1 id="ballCounter">0</h1>
+    <div class="ball"></div>
+
+    <script>
+      function getTextByID(id) {
+        console.log(document.getElementById(id).innerText);
+      }
+
+      function changeTextByID(id, text) {
+        document.getElementById(id).innerText = text;
+      }
+
+      function addToTextByID(id, text)
+        {
+            document.getElementById(id).innerText += ` ${text}`;
+        }
+
+        let ball = document.querySelector(".ball");
+        let ballCountHeader = document.getElementById("ballCounter").innerText;
+        let ballCounter = 0;
+        ball.addEventListener('click', moveBall)
+
+        function moveBall(){
+            ball.style.left =this.left + `100px`;
+            // ballCounter++;
+            // ballCountHeader = ballCounter;
+        }
+    </script>
+  </body>
+</html>

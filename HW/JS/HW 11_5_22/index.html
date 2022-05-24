@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <form class="form-horizontal" onsubmit="return addCar(event,this)">
+      <div class="row">
+        <label class="control-label col-6">
+          Manufacturer:
+          <input required type="text" name="manufacturer" class="form-control" />
+        </label>
+        <label class="control-label col-6">
+          Model:
+          <input required type="text" name="model" class="form-control" />
+        </label>
+        <label class="control-label col-6">
+          Year:
+          <input required type="number" min="1900" max="2022" name="year" class="form-control" />
+        </label>
+        <label class="control-label col-6">
+          Owner:
+          <input required type="text" name="owner" class="form-control" />
+        </label>
+        <label class="control-label col-6">
+          Hand:
+          <input required type="number" min="0" name="hand" class="form-control" />
+        </label>
+      </div>
+      <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+    <hr>
+    <h1 class="text-center">Showing <span id="CarsCount">0</span> Cars</h1>
+    <div class="row" id="CarList"></div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

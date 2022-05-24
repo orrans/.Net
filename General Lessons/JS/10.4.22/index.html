@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*alert("this is internal alert");
+            alert("hey, " + prompt("whats your name?"));
+      let a = "sdfs";*/
+
+      /*let fn = "orran"
+      let ln = "bachar"
+      alert(`hello ${fn} ${ln}`);
+      fn+=ln;
+      alert(fn);*/
+
+      /* let name = prompt("whats your name?");
+      alert(`hey ${name}`);
+
+      alert("please enter 2 numbers to multiply");
+      let n1 = Number(prompt("please enter the first number"));
+      let n2 = Number(prompt("please enter the second number"));
+      alert(n1 * n2);
+      alert("now sum:");
+      alert(n1 + n2);*/
+
+      let hour;
+      alert("please enter a number between 0-24");
+      while (isNaN(hour) || hour < 0 || hour > 24) {
+        alert("Lets try again, this time please enter number between 0-24");
+        hour = Number(prompt("enter number between 0-24"));
+      }
+
+      if (hour < 12) {
+        alert("good morning");
+      } else if (hour < 17) {
+        alert("good afternoon");
+      } else {
+        alert("good evening");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="alert('hello')">press here</button>
+  </body>
+</html>
