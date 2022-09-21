@@ -142,12 +142,10 @@ internal class Methods
         }
         int temp;
         int[] newArr = new int[arr.Length];
-
         for (int i = 0; i < arr.Length; i++)
         {
             newArr[i] = arr[i];
         }
-
         for (int i = 0; i < newArr.Length - 1; i++)
         {
             for (int j = i; j < newArr.Length; j++)
@@ -159,19 +157,16 @@ internal class Methods
                     newArr[j] = temp;
                 }
             }
-
         }
         return newArr;
     }
 
     public bool AreItemsSame(int[] arr)
     {
-
         if (arr?.Length == 0)
         {
             return true;
         }
-
         int value = arr[0];
         for (int i = 0; i < arr.Length; i++)
         {
@@ -181,6 +176,5 @@ internal class Methods
             }
         }
         return true;
-
     }
 }
