@@ -22,7 +22,6 @@ internal class Methods
         }
         newArr[arr.Length] = num;
         return newArr;
-
     }
 
     public string GetIndexes(int[] arr, int num)
