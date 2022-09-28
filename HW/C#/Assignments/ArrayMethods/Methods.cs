@@ -1,7 +1,10 @@
-﻿using System;
+using Microsoft.VisualBasic;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +12,9 @@ namespace ArrayMethodsAssignment.Methods;
 
 internal class Methods
 {
-    public int[] Append(int[] arr, int num)
+    public static int[] Append(int[] arr, int num)
     {
-        if (arr?.Length == 0)
+        if (arr?.Length is 0 or null)
         {
             return new[] { num };
         }
@@ -22,25 +25,30 @@ internal class Methods
         }
         newArr[arr.Length] = num;
         return newArr;
+
     }
 
-    public string GetIndexes(int[] arr, int num)
+    public static int[] GetIndexes(int[] arr, int num)
     {
-        string indexes = "";
-        int counter = 0;
+
+        if (arr == null)
+        {
+            return null;
+        }
+        int[] Indexes = new int[0];
         for (int i = 0; i < arr.Length; i++)
         {
             if (arr[i] == num)
             {
-                indexes += $"{counter} ";
-                counter++;
+                Indexes = Append(Indexes, i);
             }
         }
-        if (counter == 0)
+        if (Indexes.Length > 0)
         {
-            return null;
+            return Indexes;
         }
-        return indexes;
+        return null;
+
     }
 
     public int[] GetItemsAbove(int[] arr, int num)
@@ -141,10 +149,12 @@ internal class Methods
         }
         int temp;
         int[] newArr = new int[arr.Length];
+
         for (int i = 0; i < arr.Length; i++)
         {
             newArr[i] = arr[i];
         }
+
         for (int i = 0; i < newArr.Length - 1; i++)
         {
             for (int j = i; j < newArr.Length; j++)
@@ -156,16 +166,19 @@ internal class Methods
                     newArr[j] = temp;
                 }
             }
+
         }
         return newArr;
     }
 
     public bool AreItemsSame(int[] arr)
     {
+
         if (arr?.Length == 0)
         {
             return true;
         }
+
         int value = arr[0];
         for (int i = 0; i < arr.Length; i++)
         {
